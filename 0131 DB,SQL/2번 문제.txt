@@ -1,0 +1,7 @@
+SELECT CustomerName
+FROM Orders as O
+JOIN Customers as C on O.CustomerID = C.CustomerID
+JOIN OrderDetails as OD on O.OrderID = OD.OrderID
+JOIN Products as P on OD.ProductID = P.ProductID
+WHERE (OD.Quantity*P.Price) >= 10000
+GROUP BY C.CustomerName;

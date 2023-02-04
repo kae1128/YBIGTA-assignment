@@ -1,0 +1,3 @@
+SELECT CategoryID, count(ProductID) as Quantity
+FROM Prorducts
+Group by CategoryID;
